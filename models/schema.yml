@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+    - name: raw_staging
+      database: PILOT
+      schema: RAW_STAGE
+      tables:
+        - name:  calpro_staging_calpronps 
+
