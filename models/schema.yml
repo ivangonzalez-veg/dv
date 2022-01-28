@@ -10,4 +10,5 @@ sources:
         - name: vetspire_stg_locations
         - name: vetspire_stg_providers
         - name: paycom_employee_extra_data
+        - name: paycom_stg_employees
 
