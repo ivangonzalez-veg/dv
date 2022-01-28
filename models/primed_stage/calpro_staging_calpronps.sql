@@ -28,6 +28,10 @@ hashed_columns:
     is_hashdiff: true
     columns:
       - 'SITE_NAME'
+  SURVEY_LOCATION_HK:
+    - 'COLLISION_KEY'
+    - 'SURVEY_ID'
+    - 'LOCATION_NAME'
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}
