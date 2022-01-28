@@ -1,7 +1,7 @@
 -- {{ config(materialized='incremental') }}
 
 {%- set yaml_metadata -%}
-source_model: "primed_paycom_employee_extra_data"
+source_model: "primed_paycom_stg_employees"
 src_pk: "WORKER_HK"
 src_hashdiff: "WORKER_DETAIL_HASHDIFF"
 src_payload:
