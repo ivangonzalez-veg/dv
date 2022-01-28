@@ -5,5 +5,6 @@ sources:
       database: PILOT
       schema: RAW_STAGE
       tables:
-        - name:  calpro_staging_calpronps 
+        - name: calpro_staging_calpronps
+        - name: seed_locations
 
