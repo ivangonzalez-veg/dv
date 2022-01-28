@@ -2,22 +2,28 @@
 
 {%- set yaml_metadata -%}
 source_model: 
-  raw_staging: "vetspire_stage_locations"
+  raw_staging: "vetspire_stg_providers"
 derived_columns:
-  LOCATION_NAME: 'NAME'
+  LAST_NAME: 'FAMILY_NAME'
+  FIRST_NAME: 'GIVEN_NAME'
+  WORKER_ID: 'ID'
   LOAD_DATE: 'TO_TIMESTAMP_NTZ(CURRENT_TIMESTAMP())'
   EFFECTIVE_FROM: 'INSERTED_AT'
-  RECORD_SOURCE: '!VETSPIRE'
+  RECORD_SOURCE: '!VETSPIRE_STG_PROVIDERS'
+  COLLISION_KEY: '!VETSPIRE_PROVIDER'
 hashed_columns:
-  LOCATION_HK: 
-    - 'LOCATION_NAME'
-  LOCATION_DETAIL_HASHDIFF:
+  WORKER_HK: 
+    - 'COLLISION_KEY'
+    - 'WORKER_ID'
+  WORKER_DETAIL_HASHDIFF:
     is_hashdiff: true
     exclude_columns: true
     columns:
-      - 'LOCATION_NAME'
-      - 'UPDATED_AT'
+      - 'WORKER_ID'
+      - 'LOAD_DATE'
       - 'INSERTED_AT'
+      - 'ID'
+      - 'UPDATED_AT'
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}
@@ -27,5 +33,3 @@ hashed_columns:
                   derived_columns=metadata_dict['derived_columns'],
                   hashed_columns=metadata_dict['hashed_columns'],
                   ranked_columns=none) }}
-
-                  

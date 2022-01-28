@@ -1,8 +1,8 @@
 -- {{ config(materialized='incremental') }}
 
-{%- set source_model = ["calpro_staging_calpronps", "seed_locations", "primed_vetspire_stg_locations"] -%}
-{%- set src_pk = "LOCATION_HK" -%}
-{%- set src_nk = "LOCATION_NAME" -%}
+{%- set source_model = ["primed_vetspire_stg_providers"] -%}
+{%- set src_pk = "WORKER_HK" -%}
+{%- set src_nk = ["COLLISION_KEY", "WORKER_ID"] -%}
 {%- set src_ldts = "LOAD_DATE" -%}
 {%- set src_source = "RECORD_SOURCE" -%}
 

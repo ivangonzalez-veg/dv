@@ -7,5 +7,6 @@ sources:
       tables:
         - name: calpro_staging_calpronps
         - name: seed_locations
-        - name: vetspire_stage_locations
+        - name: vetspire_stg_locations
+        - name: vetspire_stg_providers
 
