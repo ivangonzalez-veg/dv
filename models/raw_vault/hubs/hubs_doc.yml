@@ -1,0 +1,45 @@
+version: 2
+
+models:
+
+  - name: hub_survey
+    description: This hub table contains metadata and business keys related to the concept of survey
+  
+    columns:
+      - name: SURVEY_HK
+        description: This is a unique identifier for the survey
+        tests:
+          - unique
+          - not_null    
+
+      - name: SURVEY_ID
+        description: This is ...
+        tests:
+
+      - name: COLLISION_KEY
+        description: This is ... 
+
+      - name: LOAD_DATE
+        description: This is ... 
+      
+      - name: RECORD_SOURCE
+        description: This is ...      
+
+  - name: hub_location
+    description: This hub table contains metadata and business keys related to the concept of location
+
+    columns:
+      - name: LOCATION_HK
+        description: This is a unique identifier for the location
+        tests:
+          - unique
+          - not_null    
+
+      - name: LOCATION_NAME
+        description: This is ...
+
+      - name: LOAD_DATE
+        description: This is ... 
+      
+      - name: RECORD_SOURCE
+        description: This is ...      

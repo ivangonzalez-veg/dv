@@ -1,0 +1,23 @@
+version: 2
+
+models:
+
+  - name: sat_calpro_survey_detail
+    description: This is a satellite that tracks the history of "Survey" details associated with Survey BKs
+
+    columns:
+      - name: SURVEY_HK
+        description: This is a unique identifier for the survey
+        tests:
+          - unique
+          - not_null    
+
+  - name: sat_calpro_location_detail
+    description: This is a satellite that tracks the history of "Location" details associated with Location BKs
+
+    columns:
+      - name: LOCATION_HK
+        description: This is a unique identifier for the location
+        tests:
+          - unique
+          - not_null    
