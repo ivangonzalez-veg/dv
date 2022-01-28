@@ -1,6 +1,6 @@
 -- {{ config(materialized='incremental') }}
 
-{%- set source_model = ["calpro_staging_calpronps", "seed_locations"] -%}
+{%- set source_model = ["calpro_staging_calpronps", "seed_locations", "primed_vetspire_stage_locations"] -%}
 {%- set src_pk = "LOCATION_HK" -%}
 {%- set src_nk = "LOCATION_NAME" -%}
 {%- set src_ldts = "LOAD_DATE" -%}
