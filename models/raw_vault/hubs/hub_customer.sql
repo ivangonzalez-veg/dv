@@ -1,8 +1,8 @@
 -- {{ config(materialized='incremental') }}
 
-{%- set source_model = "calpro_staging_calpronps"   -%}
-{%- set src_pk = "SURVEY_HK" -%}
-{%- set src_nk = ["COLLISION_KEY", "SURVEY_ID"] -%}
+{%- set source_model = ["primed_vetspire_stg_clients"] -%}
+{%- set src_pk = "CUSTOMER_HK" -%}
+{%- set src_nk = ["COLLISION_KEY","CUSTOMER_ID"] -%}
 {%- set src_ldts = "LOAD_DATE" -%}
 {%- set src_source = "RECORD_SOURCE" -%}
 
