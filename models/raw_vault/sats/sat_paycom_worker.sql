@@ -36,7 +36,7 @@ src_payload:
   - "LAST_NAME"
   - "FIRST_NAME"
   - "MIDDLE_NAME"
-src_eff: "CREATED_ON"
+src_eff: "EFFECTIVE_FROM"
 src_ldts: "LOAD_DATE"
 src_source: "RECORD_SOURCE"
 {%- endset -%}

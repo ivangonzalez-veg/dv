@@ -5,7 +5,7 @@ source_model: "seed_locations"
 src_pk: "LOCATION_HK"
 src_hashdiff: "LOCATION_DETAIL_HASHDIFF"
 src_payload:
-    - "SITE_NAME"
+    - "LOCATION_NAME"
     - "ACTIVE"
     - "CLOSE_DATE"
     - "CODE"

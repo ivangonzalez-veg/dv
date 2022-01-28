@@ -11,7 +11,6 @@ src_payload:
   - "EMAIL_VERIFIED_DATE"
   - "FAMILY_NAME"
   - "GIVEN_NAME"
-  - "INSERTED_AT"
   - "IS_ACTIVE"
   - "NAME"
   - "SENT_EMAIL_VERIFICATIONDATE"

@@ -8,9 +8,9 @@ derived_columns:
   FIRST_NAME: 'LEGAL_FIRST_NAME'
   MIDDLE_NAME: 'LEGAL_MIDDLE_NAME'
   WORKER_ID: 'EMPLOYEE_CODE'
-  MASKED_UID: 'MD5(UID)'
+  MASKED_UID: 'UID'
   LOAD_DATE: 'TO_TIMESTAMP_NTZ(CURRENT_TIMESTAMP())'
-  EFFECTIVE_FROM: 'CREATED_ON'
+  EFFECTIVE_FROM: 'TO_TIMESTAMP_NTZ(CURRENT_TIMESTAMP())'
   RECORD_SOURCE: '!PAYCOM_EMPLOYEE_EXTRA_DATA'
   COLLISION_KEY: '!PAYCOM_EMPLOYEE'
 hashed_columns:
@@ -19,7 +19,6 @@ hashed_columns:
     - 'WORKER_ID'
   WORKER_PII_DETAIL_HASHDIFF:
     is_hashdiff: true
-    exclude_columns: false
     columns:
       - 'LAST_NAME'
       - 'FIRST_NAME'
@@ -27,7 +26,7 @@ hashed_columns:
       - 'EMPLOYEE_NAME'
       - 'UID'
       - 'DOB'
-  WORKER_DETAIL_HASHDIFF:
+  WORKER_POSITION_DETAIL_HASHDIFF:
     is_hashdiff: true
     exclude_columns: true
     columns:
@@ -44,7 +43,6 @@ hashed_columns:
       - 'UID'
       - 'DOB'
       - 'EFFECTIVE_FROM'
-      - 'CREATED_ON'
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}
