@@ -1,0 +1,18 @@
+version: 2
+
+models:
+
+  - name: primed_paycom_stg_employees
+    description: This is a primed stage model that prepares "Employees" related data from PAYCOM source system to be loaded into Raw Vault objects
+    tests:
+      - dbt_expectations.expect_table_row_count_to_equal_other_table:
+          compare_model: source('raw_staging', 'paycom_stg_employees')
+          tags:
+            - "test_group:primed_stage"
+      - expect_table_contains_all_columns_from_other_table:
+          src_database: PILOT
+          src_table_name: PAYCOM_STG_EMPLOYEES
+          tgt_database: PILOT
+          tgt_table_name: PRIMED_PAYCOM_STG_EMPLOYEES
+          tags:
+            - "test_group:primed_stage"
