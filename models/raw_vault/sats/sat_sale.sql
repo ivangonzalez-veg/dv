@@ -5,7 +5,7 @@ source_model: "primed_vetspire_orders"
 src_pk: "SALE_HK"
 src_hashdiff: "SALE_DETAIL_HASHDIFF"
 src_payload:
-  - "DW_INSERTED_AT"
+  - "EFFECTIVE_FROM"
   - "DW_SOURCE"
   - "APPLIEDCOUPONS"
   - "CLIENT_ID"
