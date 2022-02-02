@@ -12,6 +12,17 @@ derived_columns:
   RECORD_SOURCE: '!VETSPIRE_STG_PROVIDERS'
   COLLISION_KEY: '!VETSPIRE_PROVIDER'
 hashed_columns:
+  PAYROLL_HK: 
+    - 'COLLISION_KEY'
+    - 'PAYROLL_ID'
+  VETSPIRE_HK: 
+    - 'COLLISION_KEY'
+    - 'ID'
+  SAL_WORKER_HK:
+    - 'COLLISION_KEY'
+    - 'PAYROLL_ID'
+    - 'COLLISION_KEY'
+    - 'ID'
   WORKER_HK: 
     - 'COLLISION_KEY'
     - 'WORKER_ID'
