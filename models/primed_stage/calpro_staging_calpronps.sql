@@ -4,7 +4,7 @@
 source_model: 
   raw_staging: "calpro_staging_calpronps"
 derived_columns:
-  LOCATION_NAME: 'SITE_NAME'
+  LOCATION_NAME: 'TRIM(SUBSTRING( SITE_NAME, 31 ))'
   DOCTOR_FIRST_NAME: '!TO_BE_CHANGED'
   DOCTOR_LAST_NAME: '!TO_BE_CHANGED'
   SURVEY_ID: 'RESPONSE_ID'
