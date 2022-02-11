@@ -1,6 +1,6 @@
 {{ config(materialized='incremental') }}
 
-{%- set source_model = "calpro_staging_calpronps" -%}
+{%- set source_model = "primed_calpro_staging_calpronps" -%}
 {%- set src_pk = "SURVEY_LOCATION_HK" -%}
 {%- set src_fk = ["SURVEY_HK", "LOCATION_HK"] -%}
 {%- set src_ldts = "LOAD_DATE" -%}

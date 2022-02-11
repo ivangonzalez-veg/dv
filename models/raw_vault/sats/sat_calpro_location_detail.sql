@@ -1,7 +1,7 @@
 -- {{ config(materialized='incremental') }}
 
 {%- set yaml_metadata -%}
-source_model: "calpro_staging_calpronps"
+source_model: "primed_calpro_staging_calpronps"
 src_pk: "LOCATION_HK"
 src_hashdiff: "LOCATION_DETAIL_HASHDIFF"
 src_payload:

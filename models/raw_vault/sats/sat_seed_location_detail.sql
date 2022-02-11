@@ -1,7 +1,7 @@
 -- {{ config(materialized='incremental') }}
 
 {%- set yaml_metadata -%}
-source_model: "seed_locations"
+source_model: "primed_seed_locations"
 src_pk: "LOCATION_HK"
 src_hashdiff: "LOCATION_DETAIL_HASHDIFF"
 src_payload:
