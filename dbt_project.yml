@@ -55,6 +55,9 @@ models:
       sats:
         tags:
           - "sats"
+      eff_sats:
+        tags:
+          - "eff_sats"
 
 
 
