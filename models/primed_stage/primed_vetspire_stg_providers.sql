@@ -23,7 +23,7 @@ hashed_columns:
     - 'COLLISION_KEY_PAYCOM'
     - 'PAYROLL_ID'
     - 'COLLISION_KEY_VETSPIRE'
-    - 'WORKER_ID'
+    - 'ID'
   WORKER_HK: 
     - 'COLLISION_KEY_VETSPIRE'
     - 'WORKER_ID'

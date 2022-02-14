@@ -1,38 +1,37 @@
-{{ config(enable=false)}}
+-- {{ config(enable=false) }}
 
-
---{{ config(materialized='pit_incremental') }}
+{{ config(materialized='pit_incremental') }}
 
 {%- set yaml_metadata -%}
 source_model: hub_worker
 src_pk: WORKER_HK
 src_ldts: LOAD_DATE
-as_of_dates_table: AS_OF_DATE
+as_of_dates_table: "as_of_date"
 satellites: 
-  SAT_PAYCOM_WORKER_CITY_STATE_ZIP:
+  sat_paycom_worker_city_state_zip:
     pk:
       PK: WORKER_HK
     ldts:
       LDTS: LOAD_DATE
-  SAT_PAYCOM_WORKER_POSITION_DETAIL:
+  sat_paycom_worker_position_detail:
     pk:
       PK: WORKER_HK
     ldts:
       LDTS: LOAD_DATE
-  SAT_PAYCOM_VETSPIRE_WORKER_DETAIL:
+  sat_paycom_worker:
     pk:
       PK: WORKER_HK
     ldts:
       LDTS: LOAD_DATE
-  SAT_PAYCOM_WORKER:
+  sat_vetspire_worker_detail:
     pk:
       PK: WORKER_HK
     ldts:
       LDTS: LOAD_DATE
 stage_tables: 
-  PRIMED_PAYCOM_STG_EMPLOYEES: LOAD_DATE
-  PRIMED_PAYCOM_EMPLOYEE_EXTRA_DATA: LOAD_DATE
-  PRIMED_VETSPIRE_STG_PROVIDERS: LOAD_DATE
+  primed_paycom_stg_employees: LOAD_DATE
+  primed_paycom_employee_extra_data: LOAD_DATE
+  primed_vetspire_stg_providers: LOAD_DATE
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}
@@ -50,4 +49,4 @@ stage_tables:
                 stage_tables=stage_tables,
                 src_ldts=src_ldts) }}
 
-                */
+                

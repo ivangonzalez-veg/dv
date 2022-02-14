@@ -58,6 +58,16 @@ models:
       eff_sats:
         tags:
           - "eff_sats"
+      pit:
+        tags:
+          - "pits"
+      as_of_date:
+        tags:
+          - "as_of_date"
+
+
+
+
 
 
 
