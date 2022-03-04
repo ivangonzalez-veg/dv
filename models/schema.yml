@@ -13,4 +13,5 @@ sources:
         - name: paycom_stg_employees
         - name: vetspire_stg_clients
         - name: vetspire_orders
+        - name: deputy_schedule_report
 
