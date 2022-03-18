@@ -17,7 +17,7 @@ hashed_columns:
     - 'DISPLAY_NAME'
     - 'AREA_NAME'
     - 'ROSTER_SORT_ORDER'
-  SURVEY_DETAIL_HASHDIFF:
+  SCHEDULE_DETAIL_HASHDIFF:
     is_hashdiff: true
     exclude_columns: true
     columns:

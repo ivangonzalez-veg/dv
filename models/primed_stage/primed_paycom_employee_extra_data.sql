@@ -43,6 +43,7 @@ hashed_columns:
       - 'UID'
       - 'DOB'
       - 'EFFECTIVE_FROM'
+      - 'CREATED_ON'
 {%- endset -%}
 
 {% set metadata_dict = fromyaml(yaml_metadata) %}
